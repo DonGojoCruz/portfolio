@@ -1,13 +1,16 @@
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="/" class="nav-logo" id="nav-logo">Kabil C.A</a>
-    <ul class="nav-links" id="nav-links">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" id="nav-home">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active" class="nav-link" id="nav-about">About</a></li>
-      <li><a routerLink="/portfolio" routerLinkActive="active" class="nav-link" id="nav-portfolio">Portfolio</a></li>
-    </ul>
-    <a href="mailto:kabil@example.com" class="nav-cta" id="nav-cta">Let's talk</a>
+    <a href="/" class="nav-logo" id="nav-logo"><span>Don</span> G.C.</a>
+    <div class="nav-pill" id="nav-pill">
+      <ul class="nav-links" id="nav-links">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link"
+            id="nav-home">Home</a></li>
+        <li><a routerLink="/portfolio" routerLinkActive="active" class="nav-link" id="nav-portfolio">Projects</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" class="nav-link" id="nav-about">Contact</a></li>
+      </ul>
+    </div>
+    <a href="mailto:don@example.com" class="nav-cta" id="nav-cta">Let's Talk</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" (click)="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
@@ -16,62 +19,476 @@
 
 <!-- Hero Section -->
 <section class="hero" id="home">
+  <!-- Background grid lines -->
+  <div class="hero-grid" aria-hidden="true">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
   <div class="hero-container">
-    <div class="hero-content" id="hero-content">
-      <h1 class="hero-title" id="hero-title">
-        Frontend web<br>developer !
-      </h1>
-      <p class="hero-subtitle" id="hero-subtitle">
-        Hi, I'm Kabil. A passionate Front-end Web<br>Developer based in India 📍
-      </p>
-      <div class="hero-socials" id="hero-socials">
-        <a href="https://linkedin.com" target="_blank" class="social-icon" id="social-linkedin" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-        </a>
-        <a href="https://github.com" target="_blank" class="social-icon" id="social-github" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
+
+    <!-- Floating Badge Left -->
+    <div class="float-badge float-badge--left" id="badge-left">
+      <div class="float-badge__icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+          <rect width="40" height="40" rx="10" fill="#FFF3F0" />
+          <path d="M20 10 L28 16 L28 24 L20 30 L12 24 L12 16 Z" stroke="#E84C3D" stroke-width="2" fill="none" />
+          <circle cx="20" cy="20" r="3" fill="#E84C3D" />
+        </svg>
+      </div>
+      <div class="float-badge__info">
+        <img src="profile.png" alt="Don G.C." class="float-badge__avatar">
+        <span class="float-badge__name">Don G.C.</span>
       </div>
     </div>
+
+    <!-- Floating Badge Right -->
+    <div class="float-badge float-badge--right" id="badge-right">
+      <div class="float-badge__icon float-badge__icon--alt">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+          <rect width="40" height="40" rx="10" fill="#F0F6FF" />
+          <path d="M20 12 C24 12 27 14.5 28 18 C27 21.5 24 24 20 24 C16 24 13 21.5 12 18 C13 14.5 16 12 20 12Z"
+            stroke="#4285F4" stroke-width="1.5" fill="none" />
+          <path d="M14 22 C16 26 20 28 20 28 C20 28 24 26 26 22" stroke="#EA4335" stroke-width="1.5" fill="none" />
+          <circle cx="20" cy="18" r="3" fill="#FBBC04" />
+        </svg>
+      </div>
+      <div class="float-badge__info float-badge__info--rtl">
+        <span class="float-badge__name">Don G.C.</span>
+        <img src="profile.png" alt="Don G.C." class="float-badge__avatar">
+      </div>
+    </div>
+
+    <!-- Profile Photo -->
     <div class="hero-avatar-wrap" id="hero-avatar">
       <div class="hero-avatar-ring">
-        <img src="profile.png" alt="Kabil C.A - Frontend Developer" class="hero-avatar-img" id="avatar-img">
+        <img src="profile.png" alt="Don G.C. - Frontend Developer" class="hero-avatar-img" id="avatar-img">
       </div>
-      <div class="avatar-glow"></div>
+    </div>
+
+    <!-- Tags -->
+    <div class="hero-tags" id="hero-tags">
+      <span class="tag">Frontend Development</span>
+      <span class="tag">UI/UX Design</span>
+      <span class="tag">Web Design</span>
+    </div>
+
+    <!-- Hero Text -->
+    <div class="hero-content" id="hero-content">
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-title--accent">Don</span> G.C. Here
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        3+ years of experience transforming ideas into reality through innovative web development
+      </p>
+      <a href="mailto:don@example.com" class="hero-cta" id="hero-cta">Get In Touch</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== MY JOURNEY ===================== -->
+<section class="info-section" id="journey">
+  <div class="info-container">
+    <div class="info-heading-col">
+      <h2 class="info-heading">My <span class="info-heading--muted">Journey</span></h2>
+    </div>
+    <div class="info-content-col">
+      <p class="journey-text">
+        With over 3 years of experience as a Frontend Developer, I've shaped digital products for both startups and
+        established companies. My career began in web design, where I developed a strong eye for aesthetics and
+        user-centered interfaces. As I transitioned into frontend development, I focused on creating seamless
+        experiences that drive engagement and business growth.
+      </p>
+      <p class="journey-text">
+        I've worked across industries like FinTech, eCommerce, and SaaS, gaining a deep understanding of building for
+        different user needs while ensuring business goals are met. From MVPs to fully operational platforms, I take a
+        clean-code and user-centered approach to every project.
+      </p>
+      <p class="journey-text">
+        I've built design systems, developed scalable component libraries, and collaborated with cross-functional teams
+        to bring ideas from concept to reality.
+      </p>
+      <p class="journey-text">
+        In recent years, I've helped startups achieve milestones — from building MVPs to launching products that reached
+        thousands of users. I'm passionate about creating impactful digital experiences that drive real success.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- Tech Stack Section -->
-<section class="tech-stack" id="tech-stack">
-  <div class="tech-stack-container">
-    <p class="tech-label" id="tech-label">Tech Stocks</p>
-    <div class="tech-track-wrap">
-      <div class="tech-track" id="tech-track">
-        <div class="tech-item" title="HTML5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
-        <div class="tech-item" title="CSS3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
-        <div class="tech-item" title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
-        <div class="tech-item" title="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
-        <div class="tech-item" title="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
-        <div class="tech-item" title="Angular"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"></div>
-        <div class="tech-item" title="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
-        <div class="tech-item" title="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></div>
-        <div class="tech-item" title="Firebase"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="tech-item" title="HTML5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
-        <div class="tech-item" title="CSS3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
-        <div class="tech-item" title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
-        <div class="tech-item" title="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
-        <div class="tech-item" title="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
-        <div class="tech-item" title="Angular"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"></div>
-        <div class="tech-item" title="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
-        <div class="tech-item" title="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></div>
-        <div class="tech-item" title="Firebase"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"></div>
+<!-- ===================== WORK HISTORY ===================== -->
+<section class="info-section info-section--alt" id="work">
+  <div class="info-container">
+    <div class="info-heading-col">
+      <h2 class="info-heading">My<br><span class="info-heading--muted">Experiences</span></h2>
+    </div>
+    <div class="info-content-col">
+
+      <!-- Card 1 -->
+      <div class="exp-card" id="exp-1">
+        <div class="exp-card__header">
+          <div class="exp-card__logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+              <circle cx="20" cy="20" r="14" stroke="#1a1a2e" stroke-width="2.5" fill="none" />
+              <circle cx="20" cy="20" r="7" stroke="#1a1a2e" stroke-width="2" fill="none" />
+              <circle cx="20" cy="20" r="2" fill="#1a1a2e" />
+            </svg>
+          </div>
+          <div class="exp-card__title-wrap">
+            <p class="exp-card__company">Freelance</p>
+            <p class="exp-card__role">Senior Frontend Developer</p>
+          </div>
+        </div>
+        <hr class="exp-card__divider">
+        <p class="exp-card__date">Jan 2024 – Present</p>
+        <p class="exp-card__desc">
+          Building full-scale web applications and landing pages for startups and small businesses.
+          Delivered high-performance Angular and React projects with clean, maintainable codebases
+          and pixel-perfect UI implementations.
+        </p>
+        <div class="exp-card__tags">
+          <span class="exp-tag">Angular</span>
+          <span class="exp-tag">Full Time</span>
+          <span class="exp-tag">Remote</span>
+        </div>
       </div>
+
+      <!-- Card 2 -->
+      <div class="exp-card" id="exp-2">
+        <div class="exp-card__header">
+          <div class="exp-card__logo exp-card__logo--initial">K</div>
+          <div class="exp-card__title-wrap">
+            <p class="exp-card__company">Personal Projects</p>
+            <p class="exp-card__role">Frontend Developer</p>
+          </div>
+        </div>
+        <hr class="exp-card__divider">
+        <p class="exp-card__date">Mar 2022 – Dec 2023</p>
+        <p class="exp-card__desc">
+          Designed and developed portfolio websites, e-commerce storefronts, and SaaS dashboards.
+          Focused on responsive design, accessibility, and smooth animations across all modern browsers.
+        </p>
+        <div class="exp-card__tags">
+          <span class="exp-tag">React</span>
+          <span class="exp-tag">Part Time</span>
+          <span class="exp-tag">India</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- ===================== EDUCATION & COURSES ===================== -->
+<section class="info-section" id="education">
+  <div class="info-container">
+    <div class="info-heading-col">
+      <h2 class="info-heading">Education &amp;<br><span class="info-heading--muted">Courses</span></h2>
+    </div>
+    <div class="info-content-col">
+
+      <!-- Card 1 -->
+      <div class="edu-card" id="edu-1">
+        <div class="edu-card__header">
+          <div class="edu-card__logo">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+              <circle cx="20" cy="20" r="18" fill="#e8f4f8" />
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="13" font-weight="700"
+                fill="#2e7da6" font-family="Inter,sans-serif">U</text>
+            </svg>
+          </div>
+          <div class="edu-card__title-wrap">
+            <p class="edu-card__institution">Anna University</p>
+            <p class="edu-card__field">Computer Science &amp; Engineering</p>
+          </div>
+        </div>
+        <hr class="edu-card__divider">
+        <p class="edu-card__date">Jun 2019 – May 2023</p>
+        <p class="edu-card__desc">
+          Completed a Bachelor of Engineering in Computer Science with a focus on web technologies,
+          data structures, and software engineering. Graduated with a strong foundation in building
+          scalable software systems.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="edu-card" id="edu-2">
+        <div class="edu-card__header">
+          <div class="edu-card__logo">
+            <!-- Google G -->
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+              <circle cx="20" cy="20" r="18" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+              <path
+                d="M28.5 20.2c0-.65-.06-1.27-.16-1.87H20v3.54h4.77a4.07 4.07 0 0 1-1.77 2.67v2.22h2.87c1.68-1.55 2.63-3.83 2.63-6.56z"
+                fill="#4285F4" />
+              <path
+                d="M20 29c2.4 0 4.41-.8 5.88-2.14l-2.87-2.22c-.8.54-1.82.86-3.01.86-2.31 0-4.27-1.56-4.97-3.66H12.1v2.3A8.99 8.99 0 0 0 20 29z"
+                fill="#34A853" />
+              <path
+                d="M15.03 21.84A5.38 5.38 0 0 1 14.75 20c0-.64.11-1.27.28-1.84v-2.3H12.1A9 9 0 0 0 11 20c0 1.45.35 2.82.96 4.03l3.07-2.19z"
+                fill="#FBBC05" />
+              <path
+                d="M20 14.5c1.3 0 2.47.45 3.39 1.33l2.54-2.54A9 9 0 0 0 20 11a9 9 0 0 0-7.9 4.86l3.07 2.3c.7-2.1 2.66-3.66 4.83-3.66z"
+                fill="#EA4335" />
+            </svg>
+          </div>
+          <div class="edu-card__title-wrap">
+            <p class="edu-card__institution">Google</p>
+            <p class="edu-card__field">UX Design Certificate</p>
+          </div>
+        </div>
+        <hr class="edu-card__divider">
+        <p class="edu-card__date">April 2023</p>
+        <p class="edu-card__desc">
+          Completed a rigorous UX design training through Google's professional certificate program,
+          covering user research, wireframing, prototyping, and usability testing across 7 courses.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILL SET ===================== -->
+<section class="info-section info-section--alt" id="skills">
+  <div class="info-container">
+    <div class="info-heading-col">
+      <h2 class="info-heading">Skill <span class="info-heading--muted">Set</span></h2>
+    </div>
+    <div class="info-content-col">
+
+      <!-- Frontend -->
+      <div class="skill-group" id="skill-frontend">
+        <p class="skill-group__title">Frontend</p>
+        <div class="skill-group__tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+
+      <!-- UI / UX -->
+      <div class="skill-group" id="skill-uiux">
+        <p class="skill-group__title">UI / UX Design</p>
+        <div class="skill-group__tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">Usability Testing</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">A/B Testing</span>
+          <span class="skill-tag">Information Architecture</span>
+        </div>
+      </div>
+
+      <!-- Tools & Others -->
+      <div class="skill-group" id="skill-tools">
+        <p class="skill-group__title">Tools &amp; Others</p>
+        <div class="skill-group__tags">
+          <span class="skill-tag">Git &amp; GitHub</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="info-section" id="projects">
+  <div class="info-container">
+    <div class="info-heading-col">
+      <h2 class="info-heading">Selected <span class="info-heading--muted">Projects</span></h2>
+    </div>
+    <div class="info-content-col">
+
+      <!-- Project 1 -->
+      <div class="project-card" id="project-1">
+        <div class="project-card__top">
+          <div class="project-card__meta">
+            <span class="project-card__type">Web App</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" class="project-link" id="proj1-github" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="project-link" id="proj1-live" aria-label="Live Preview">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Finance Dashboard</h3>
+          <p class="project-card__desc">A full-featured analytics dashboard for personal finance tracking. Built with
+            Angular and Firebase, featuring real-time data charts, budget planning, and expense categorization with a
+            clean, responsive UI.</p>
+        </div>
+        <div class="project-card__footer">
+          <span class="project-tech-tag">Angular</span>
+          <span class="project-tech-tag">Firebase</span>
+          <span class="project-tech-tag">TypeScript</span>
+          <span class="project-tech-tag">Chart.js</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" id="project-2">
+        <div class="project-card__top">
+          <div class="project-card__meta">
+            <span class="project-card__type">Landing Page</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" class="project-link" id="proj2-github" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="project-link" id="proj2-live" aria-label="Live Preview">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">SaaS Product Landing</h3>
+          <p class="project-card__desc">A conversion-focused landing page for a SaaS startup. Includes animated hero
+            sections, feature showcases, pricing tables, and a responsive layout with smooth scroll-triggered
+            animations.</p>
+        </div>
+        <div class="project-card__footer">
+          <span class="project-tech-tag">React</span>
+          <span class="project-tech-tag">CSS Animations</span>
+          <span class="project-tech-tag">Figma</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" id="project-3">
+        <div class="project-card__top">
+          <div class="project-card__meta">
+            <span class="project-card__type">E-Commerce</span>
+            <div class="project-card__links">
+              <a href="https://github.com" target="_blank" class="project-link" id="proj3-github" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </a>
+              <a href="#" target="_blank" class="project-link" id="proj3-live" aria-label="Live Preview">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Storefront UI</h3>
+          <p class="project-card__desc">A modern e-commerce storefront with product listing, filtering, cart management,
+            and checkout flow. Focused on fast load times, accessibility, and mobile-first design.</p>
+        </div>
+        <div class="project-card__footer">
+          <span class="project-tech-tag">Angular</span>
+          <span class="project-tech-tag">Node.js</span>
+          <span class="project-tech-tag">REST API</span>
+          <span class="project-tech-tag">SCSS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <!-- Logo -->
+    <p class="contact-logo" id="contact-logo"><span>Don</span> G.C.</p>
+
+    <!-- Heading -->
+    <h2 class="contact-heading" id="contact-heading">
+      Let's <span class="contact-heading--accent">Connect</span>
+    </h2>
+
+    <!-- Subtext -->
+    <p class="contact-subtext" id="contact-subtext">
+      Whether you're looking to discuss a new project, seek advice, or collaborate,
+      I'm always excited to connect and explore new possibilities.
+    </p>
+
+    <!-- CTA -->
+    <a href="mailto:don@example.com" class="contact-cta" id="contact-cta">Get In Touch</a>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer">
+  <div class="footer-container">
+    <p class="footer-copy">© 2025 Don G.C. All rights reserved.</p>
+    <div class="footer-socials" id="footer-socials">
+      <!-- Twitter / X -->
+      <a href="https://twitter.com" target="_blank" class="footer-social-icon" id="footer-twitter" aria-label="Twitter">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.627 5.905-5.627zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com" target="_blank" class="footer-social-icon" id="footer-linkedin"
+        aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      </a>
+      <!-- Figma -->
+      <a href="https://figma.com" target="_blank" class="footer-social-icon" id="footer-figma" aria-label="Figma">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 10.49c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117v-6.038H8.148zm4.587 8.981c0 2.476-2.014 4.49-4.49 4.49s-4.49-2.014-4.49-4.49 2.014-4.49 4.49-4.49h4.49v4.49zm-4.49-3.019c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019 3.019-1.355 3.019-3.019v-3.019h-3.019zm7.705 3.019c0 2.476-2.014 4.49-4.49 4.49s-4.49-2.014-4.49-4.49v-.001h8.98v.001zM15.852 10.49c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49-4.49-2.014-4.49-4.49 2.014-4.49 4.49-4.49zm0 7.509c1.665 0 3.019-1.354 3.019-3.019s-1.354-3.019-3.019-3.019-3.019 1.355-3.019 3.019 1.354 3.019 3.019 3.019z" />
+        </svg>
+      </a>
+      <!-- Dribbble -->
+      <a href="https://dribbble.com" target="_blank" class="footer-social-icon" id="footer-dribbble"
+        aria-label="Dribbble">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.048 6.408.016.016.016.025.025.025C7.16 21.616 9.495 22.5 12 22.5c1.38 0 2.7-.27 3.9-.75l.105-.3zM3.81 17.667c.25-.428 3.28-5.444 8.56-7.12.022-.007.043-.015.064-.022-.22-.507-.456-1.01-.707-1.507-5.26 1.574-10.36 1.51-10.82 1.5l-.002.1c0 2.97 1.13 5.69 2.904 7.748zm12.55-9.16c-.28-.527-.594-1.05-.924-1.56-3.04 1.14-6.72 1.375-10.32 1.334-.005.12-.005.24-.005.36 0 1.26.19 2.47.545 3.615.132-.046.264-.092.397-.138 4.97-1.82 7.916-1.14 10.308.39zM14.87 5.04c-1.6-2.36-3.37-4.05-3.59-4.268C7.08 1.59 3.87 4.085 2.44 7.508c3.45.045 6.89-.41 9.85-1.444l2.58-1.025zm5.39 6.83c-.15-3.38-1.73-6.39-4.13-8.43-1.18.69-3.39 2.26-3.39 5.31 0 .327.027.65.08.97 2.975-.45 5.842.008 7.44.15z" />
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" class="footer-social-icon" id="footer-instagram"
+        aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
