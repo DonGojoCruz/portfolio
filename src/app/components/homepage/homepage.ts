@@ -13,6 +13,47 @@ export class Homepage implements OnInit, OnDestroy {
   menuOpen = false;
   private observer: IntersectionObserver | null = null;
   private scrollHandler: (() => void) | null = null;
+  private spyObserver: IntersectionObserver | null = null;
+
+  // ── Image Gallery Modal ─────────────────────────────────────────
+  isModalOpen = false;
+  currentImageIndex = 0;
+  rfidImages = [
+    'attendance.png',
+    'dashboard.png',
+    'display.png',
+    'hardware.png',
+    'login-teachers.png',
+    'login.png',
+    'mainpage.png',
+    'masterlist.png'
+  ];
+
+  openModal(event: Event, startIndex = 0) {
+    event.preventDefault();
+    this.currentImageIndex = startIndex;
+    this.isModalOpen = true;
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  nextImage(event?: Event) {
+    if (event) event.stopPropagation();
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.rfidImages.length;
+  }
+
+  prevImage(event?: Event) {
+    if (event) event.stopPropagation();
+    this.currentImageIndex = (this.currentImageIndex - 1 + this.rfidImages.length) % this.rfidImages.length;
+  }
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
