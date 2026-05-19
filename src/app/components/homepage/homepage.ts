@@ -58,15 +58,45 @@ export class Homepage implements OnInit, OnDestroy {
       this.observer!.observe(el);
     });
 
-    // ── Navbar scroll shadow ─────────────────────────────────────────
+    // ── Navbar scroll shadow & Scroll Spy ────────────────────────────
     const navbar = document.getElementById('navbar');
+    const spySections = ['home', 'projects', 'contact'];
+    const navLinksList = document.querySelectorAll('.nav-link');
+
     this.scrollHandler = () => {
       if (window.scrollY > 20) {
         navbar?.classList.add('scrolled');
       } else {
         navbar?.classList.remove('scrolled');
       }
+
+      let currentSection = 'home';
+      // Use window.innerHeight / 2 for a more natural trigger near the middle of the screen
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+
+      for (const id of spySections) {
+        const el = document.getElementById(id);
+        if (el && scrollPos >= el.offsetTop) {
+          currentSection = id;
+        }
+      }
+
+      // Force 'contact' to be active if scrolled to the absolute bottom of the page
+      const isAtBottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 20;
+      if (isAtBottom) {
+        currentSection = 'contact';
+      }
+
+      navLinksList.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
     };
+
+    // Set initial active state
+    this.scrollHandler();
     window.addEventListener('scroll', this.scrollHandler, { passive: true });
   }
 

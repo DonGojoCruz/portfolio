@@ -303,8 +303,8 @@ ul {
 }
 
 .hero-avatar-ring {
-  width: 220px;
-  height: 220px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
@@ -473,8 +473,8 @@ ul {
   }
 
   .hero-avatar-ring {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -484,8 +484,8 @@ ul {
   }
 
   .hero-avatar-ring {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
   }
 
   .nav-container {
