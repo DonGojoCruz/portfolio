@@ -437,7 +437,12 @@ ul {
 
 @media (max-width: 768px) {
   .nav-pill {
-    display: none;
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
   }
 
   .nav-cta {
